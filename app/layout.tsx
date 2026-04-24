@@ -12,6 +12,10 @@ const interTight = Inter_Tight({
 export const metadata: Metadata = {
   title: 'Humano en el Loop — El podcast sobre IA y atención al cliente',
   description: 'Conversaciones sobre cómo la inteligencia artificial está transformando la forma en que las empresas se relacionan con sus clientes. Un podcast de Bircle.',
+  icons: {
+    icon: '/icon.svg',
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: 'Humano en el Loop',
     description: 'El podcast sobre IA y atención al cliente',

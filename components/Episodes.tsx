@@ -46,31 +46,12 @@ export function Episodes() {
           </h2>
         </div>
 
-        {/* Episodes Grid */}
+        {/* Episodes */}
         {isVisible && (
-          <div className="grid md:grid-cols-2 gap-6">
-            {episodes.map((episode, index) => (
-              <EpisodeCard key={episode.id} episode={episode} index={index} />
-            ))}
+          <div className="max-w-2xl mx-auto">
+            <EpisodeCard episode={episodes[0]} index={0} />
           </div>
         )}
-
-        {/* View all link */}
-        <div 
-          className={`text-center mt-12 transition-all duration-700 delay-500 ${
-            isVisible ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
-          >
-            Ver todos los episodios
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
       </div>
     </section>
   )

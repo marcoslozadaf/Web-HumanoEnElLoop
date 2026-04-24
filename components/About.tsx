@@ -57,7 +57,7 @@ export function About() {
             <div className="mt-8 pt-8 border-t border-border">
               <p className="text-sm text-muted-foreground">
                 <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse" />
-                Nuevos episodios cada semana
+                Nuevos episodios cada mes
               </p>
             </div>
           </div>

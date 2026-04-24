@@ -27,22 +27,29 @@ export function Newsletter() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!email || !email.includes("@")) {
       setStatus("error")
       return
     }
 
     setStatus("loading")
-    
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    
-    setStatus("success")
-    setEmail("")
-    
-    // Reset after 3 seconds
-    setTimeout(() => setStatus("idle"), 3000)
+
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      })
+
+      if (!res.ok) throw new Error()
+
+      setStatus("success")
+      setEmail("")
+      setTimeout(() => setStatus("idle"), 3000)
+    } catch {
+      setStatus("error")
+    }
   }
 
   return (
