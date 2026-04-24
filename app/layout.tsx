@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'Humano en el Loop — El podcast sobre IA y atención al cliente',
   description: 'Conversaciones sobre cómo la inteligencia artificial está transformando la forma en que las empresas se relacionan con sus clientes. Un podcast de Bircle.',
   icons: {
-    icon: '/icon.svg',
+    icon: '/favicon.png',
     apple: '/apple-icon.png',
   },
   openGraph: {
