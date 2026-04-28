@@ -89,10 +89,19 @@ export function Hero() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://open.spotify.com/show/1w0BL82UOtlqPbFxJMKsrM?si=23987da3e59144db"
+              href="https://www.youtube.com/@humanoenelloop"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 px-6 py-3 bg-foreground text-background rounded-full font-medium hover:bg-foreground/90 transition-colors"
+            >
+              <YouTubeIcon />
+              <span>YouTube</span>
+            </a>
+            <a
+              href="https://open.spotify.com/show/1w0BL82UOtlqPbFxJMKsrM?si=23987da3e59144db"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-3 border border-border rounded-full font-medium hover:bg-secondary transition-colors"
             >
               <SpotifyIcon />
               <span>Spotify</span>
@@ -105,15 +114,6 @@ export function Hero() {
             >
               <ApplePodcastsIcon />
               <span>Apple Podcasts</span>
-            </a>
-            <a
-              href="https://www.youtube.com/@humanoenelloop"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-6 py-3 border border-border rounded-full font-medium hover:bg-secondary transition-colors"
-            >
-              <YouTubeIcon />
-              <span>YouTube</span>
             </a>
           </div>
         </div>
