@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter_Tight } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import Script from 'next/script'
 import './globals.css'
 
 const interTight = Inter_Tight({ 
@@ -37,6 +38,13 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${interTight.variable} bg-background`}>
       <body className="font-sans antialiased">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-J62KK5WYWV" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-J62KK5WYWV');
+        `}</Script>
         <div className="noise-overlay" aria-hidden="true" />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
