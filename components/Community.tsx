@@ -27,12 +27,12 @@ export function Community() {
             >
               <iframe
                 src={post.embedUrl}
-                width="504"
+                width="100%"
                 height="543"
                 frameBorder="0"
                 allowFullScreen
                 title={`Publicación de ${post.author}`}
-                className="w-full"
+                className="w-full block"
               />
             </div>
           ))}
