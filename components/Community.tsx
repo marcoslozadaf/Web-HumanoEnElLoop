@@ -1,6 +1,43 @@
 "use client"
 
-import { linkedInPosts } from "@/lib/linkedin-posts"
+import { linkedInPosts, type LinkedInPost } from "@/lib/linkedin-posts"
+import { useRef, useState, useEffect } from "react"
+
+const IFRAME_W = 504
+const IFRAME_H = 543
+
+function LinkedInEmbed({ post }: { post: LinkedInPost }) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [scale, setScale] = useState(1)
+
+  useEffect(() => {
+    const update = () => {
+      if (!containerRef.current) return
+      const w = containerRef.current.offsetWidth
+      setScale(w < IFRAME_W ? w / IFRAME_W : 1)
+    }
+    update()
+    window.addEventListener("resize", update)
+    return () => window.removeEventListener("resize", update)
+  }, [])
+
+  return (
+    <div
+      ref={containerRef}
+      className="w-full overflow-hidden"
+      style={{ height: IFRAME_H * scale }}
+    >
+      <iframe
+        src={post.embedUrl}
+        width={IFRAME_W}
+        height={IFRAME_H}
+        allowFullScreen
+        title={`Publicación de ${post.author}`}
+        style={{ border: "none", transformOrigin: "top left", transform: `scale(${scale})` }}
+      />
+    </div>
+  )
+}
 
 export function Community() {
   return (
@@ -25,15 +62,7 @@ export function Community() {
               key={post.id}
               className="flex-shrink-0 snap-center w-[504px] max-w-[90vw] rounded-xl overflow-hidden border border-border bg-card"
             >
-              <iframe
-                src={post.embedUrl}
-                width="100%"
-                height="543"
-                frameBorder="0"
-                allowFullScreen
-                title={`Publicación de ${post.author}`}
-                className="w-full block"
-              />
+              <LinkedInEmbed post={post} />
             </div>
           ))}
         </div>
