@@ -12,4 +12,10 @@ export const linkedInPosts: LinkedInPost[] = [
     author: "Marcos Lozada Freytes",
     role: "Co-Founder at Bircle",
   },
+  {
+    id: "7455327580808790016",
+    embedUrl: "https://www.linkedin.com/embed/feed/update/urn:li:share:7455327580808790016?collapsed=1",
+    author: "José Romero Victorica",
+    role: "Founder & CEO de Allus Global BPO Center",
+  },
 ]
