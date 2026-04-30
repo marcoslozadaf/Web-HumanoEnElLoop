@@ -112,6 +112,15 @@ export function Newsletter() {
             <p className="text-muted-foreground text-xs mt-6">
               Sin spam. Podés desuscribirte cuando quieras.
             </p>
+            <p className="text-muted-foreground text-sm mt-4">
+              ¿Querés ser parte o tenés algo para aportar?{" "}
+              <a
+                href="mailto:hola@humanoenelloop.com"
+                className="text-foreground hover:underline font-medium"
+              >
+                hola@humanoenelloop.com
+              </a>
+            </p>
           </div>
         </div>
       </div>

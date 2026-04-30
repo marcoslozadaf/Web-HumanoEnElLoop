@@ -112,13 +112,21 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://bircle.ai" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://bircle.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   Bircle
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:hola@humanoenelloop.com"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                >
+                  hola@humanoenelloop.com
                 </a>
               </li>
             </ul>
