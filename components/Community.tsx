@@ -4,7 +4,6 @@ import { linkedInPosts, type LinkedInPost } from "@/lib/linkedin-posts"
 import { useRef, useState, useEffect } from "react"
 
 const IFRAME_W = 504
-const IFRAME_H = 543
 
 function LinkedInEmbed({ post }: { post: LinkedInPost }) {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -25,12 +24,12 @@ function LinkedInEmbed({ post }: { post: LinkedInPost }) {
     <div
       ref={containerRef}
       className="w-full overflow-hidden"
-      style={{ height: IFRAME_H * scale }}
+      style={{ height: post.height * scale }}
     >
       <iframe
         src={post.embedUrl}
         width={IFRAME_W}
-        height={IFRAME_H}
+        height={post.height}
         allowFullScreen
         title={`Publicación de ${post.author}`}
         style={{ border: "none", transformOrigin: "top left", transform: `scale(${scale})` }}
