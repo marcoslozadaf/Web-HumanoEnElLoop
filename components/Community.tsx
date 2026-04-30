@@ -4,7 +4,6 @@ import { linkedInPosts, type LinkedInPost } from "@/lib/linkedin-posts"
 import { useRef, useState, useEffect } from "react"
 
 const IFRAME_W = 504
-const MAX_H = Math.max(...linkedInPosts.map((p) => p.height))
 
 function LinkedInEmbed({ post }: { post: LinkedInPost }) {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -56,10 +55,7 @@ export function Community() {
 
         <div className="flex flex-col items-center gap-6">
           {/* Card */}
-          <div
-            className="w-126 max-w-[90vw] rounded-xl overflow-hidden border border-border bg-card"
-            style={{ minHeight: MAX_H * 0.8 }}
-          >
+          <div className="w-126 max-w-[90vw] rounded-xl overflow-hidden border border-border bg-card">
             <LinkedInEmbed key={linkedInPosts[current].id} post={linkedInPosts[current]} />
           </div>
 
