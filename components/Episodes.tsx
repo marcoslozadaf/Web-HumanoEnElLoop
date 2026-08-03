@@ -48,8 +48,10 @@ export function Episodes() {
 
         {/* Episodes */}
         {isVisible && (
-          <div className="max-w-2xl mx-auto">
-            <EpisodeCard episode={episodes[0]} index={0} />
+          <div className="max-w-2xl mx-auto space-y-6">
+            {episodes.map((episode, index) => (
+              <EpisodeCard key={episode.id} episode={episode} index={index} />
+            ))}
           </div>
         )}
       </div>
