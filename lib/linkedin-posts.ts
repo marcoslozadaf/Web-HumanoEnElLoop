@@ -21,6 +21,20 @@ export const linkedInPosts: LinkedInPost[] = [
     role: "Founder & CEO de Allus Global BPO Center",
     height: 533,
   },
+  {
+    id: "7493997259290804224",
+    embedUrl: "https://www.linkedin.com/embed/feed/update/urn:li:share:7493997259290804224?collapsed=1",
+    author: "Marcos Lozada Freytes",
+    role: "Co-Founder at Bircle",
+    height: 670,
+  },
+  {
+    id: "7497693822756331520",
+    embedUrl: "https://www.linkedin.com/embed/feed/update/urn:li:share:7497693822756331520?collapsed=1",
+    author: "José Romero Victorica (h.)",
+    role: "Co-Founder at Bircle",
+    height: 543,
+  },
   // TODO: post de LinkedIn sobre el episodio con Diego Malat ("La calidad en la era de los Agentes de IA")
   // pendiente de que Marcos pase el link. Descomentar y completar embedUrl/height cuando llegue.
   // {
