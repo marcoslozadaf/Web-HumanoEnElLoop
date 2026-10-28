@@ -22,13 +22,23 @@ const EPISODE_ICONS = {
 
 export const episodes: Episode[] = [
   {
+    id: 3,
+    number: "03",
+    title: "SEO en la era de la IA: cómo aparecer primero en ChatGPT, Gemini, Claude y Grok.",
+    description: "Con Emilio Chambouleyron, especialista en SEO e Inteligencia Artificial. Ya no alcanza con estar en Google, hay que estar en la respuesta.",
+    duration: "58 min",
+    date: "28 Oct 2026",
+    isNew: true,
+    coverIcon: EPISODE_ICONS.video,
+    youtubeUrl: "https://youtu.be/P_pT3R45t84",
+  },
+  {
     id: 2,
     number: "02",
     title: "La calidad en la era de los Agentes de IA.",
     description: "Con Diego Malat, Founder & CEO de Tripointhub y consultor senior en CX e IA con más de 20 años en la industria de los contactos con clientes.",
     duration: "1h 16min",
     date: "31 Jul 2026",
-    isNew: true,
     coverIcon: EPISODE_ICONS.shuffle,
     spotifyUrl: "https://open.spotify.com/episode/3sCsKvgEGTt1CZsaseRqFv?si=BHO9aXtqR3KwNP7HCGwNkw",
     appleUrl: "https://podcasts.apple.com/ar/podcast/la-calidad-en-la-era-de-los-agentes-de-ia/id1895367070?i=1000779337665",
