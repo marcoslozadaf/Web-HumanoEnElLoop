@@ -30,6 +30,7 @@ export const episodes: Episode[] = [
     date: "28 Oct 2026",
     isNew: true,
     coverIcon: EPISODE_ICONS.video,
+    spotifyUrl: "https://open.spotify.com/episode/5LbLswAfSJYGzqERyQdbYF?si=Y09Oadz_QlWuOKHp0lLXSw",
     youtubeUrl: "https://youtu.be/P_pT3R45t84",
   },
   {
